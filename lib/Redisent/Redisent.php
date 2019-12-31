@@ -8,6 +8,7 @@
  */
 
 define('CRLF', sprintf('%s%s', chr(13), chr(10)));
+include( '/var/www/html/sistic/RedisHost.php');
 
 /**
  * Wraps native Redis errors in friendlier PHP exceptions
@@ -50,7 +51,7 @@ class Redisent {
      * @param integer $port The port number of the Redis server
      */
     function __construct($host, $port = 6379) {
-        $this->host = $host;
+        $this->host = RedisHost::REDIS_HOST;
         $this->port = $port;
 				$this->establishConnection();
     }
