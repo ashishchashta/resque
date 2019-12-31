@@ -1,4 +1,4 @@
-php-resque: PHP Resque Worker (and Enqueue) [![Build Status](https://secure.travis-ci.org/chrisboulton/php-resque.png)](http://travis-ci.org/chrisboulton/php-resque)
+
 ===========================================
 
 Resque is a Redis-backed library for creating background jobs, placing
@@ -11,10 +11,6 @@ I am a kiss-ass), and written in Ruby. What you're seeing here is an
 almost direct port of the Resque worker and enqueue system to PHP.
 
 For more information on Resque, visit the official GitHub project:
- <http://github.com/defunkt/resque/>
-
-For further information, see the launch post on the GitHub blog:
- <http://github.com/blog/542-introducing-resque>
 
 The PHP port does NOT include its own web interface for viewing queue
 stats, as the data is stored in the exact same expected format as the
@@ -225,7 +221,7 @@ their resque status.
 
 **PHP does not have this functionality by default.**
 
-A PECL module (<http://pecl.php.net/package/proctitle>) exists that
+A PECL module exists that
 adds this funcitonality to PHP, so if you'd like process titles updated,
 install the PECL module as well. php-resque will detect and use it.
 
@@ -320,25 +316,3 @@ Called after a job has been queued using the `Resque::enqueue` method. Arguments
 * Arguments - array of arguments supplied to the job
 * Queue - string containing the name of the queue the job was added to
 
-## Contributors ##
-
-* chrisboulton
-* thedotedge
-* hobodave
-* scraton
-* KevBurnsJr
-* jmathai
-* dceballos
-* patrickbajao
-* andrewjshults
-* warezthebeef
-* d11wtq
-* hlegius
-* salimane
-* humancopy
-* pedroarnal
-* chaitanyakuber
-* maetl
-* Matt Heath
-* jjfrey
-* scragg0x
